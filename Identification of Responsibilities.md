@@ -20,24 +20,24 @@
 
 #### **Responsibilities**
 
-**<u>Configuring invoice generation responsibilities </u>**
+<u>Configuring invoice generation responsibilities </u>
 - Validate input parameters
 - Persist configuration settings in the database
 
-**<u>Schedule invoice generation responsibilities</u>**
+<u>Schedule invoice generation responsibilities</u>
 - Register/Update background schedule job
 - Monitor the availability and health of the scheduling worker
 
-**<u>Generating payment information responsibilities</u>**
+<u>Generating payment information responsibilities</u>
 - Calculate total invoice amount per resident
 - Determine payment due date based on the configured due window
 - Store invoice records with status Unpaid
 - Generate payment link
 
-**<u>Generate a downloadable PDF invoice</u>**
+<u>Generate a downloadable PDF invoice</u>**
 - Render standardized PDF document from invoice data
 
-**<u>Send emails with invoice and payment reminder</u>**
+<u>Send emails with invoice and payment reminder</u>
 - Compose personalized invoice notification message
 - Dispatch email with PDF attachment via mail provider
 - Handle email delivery retries on failure
