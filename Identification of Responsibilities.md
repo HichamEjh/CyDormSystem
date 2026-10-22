@@ -153,6 +153,53 @@ As an administrator, I want to register a student in the system and verify their
 - Validate the complete application and send the contract for signature
 
 ___
+## Features: Student Complaint Submission
+
+As a student, they can submit a complaint through the application and receive confirmation that it has been sent to the administrators.
+
+### Feature breakdown
+
+1. The student goes to the page.
+
+2. If the student is not authenticated:
+   2.1. The student is directed to the authentication page.
+   2.2. The student enters their credentials.
+   2.3. If the credentials are incorrect:
+   - Show an incorrect password or ID message.
+   - Ask the student to try again.
+
+3. The student can file the complaint message.
+
+4. The student sends the complaint message.
+
+5. The system sends the message to the administrators.
+
+6. If the message is not successfully sent or received:
+   6.1. Give the user an error message.
+   6.2. Let the user resend the message.
+
+7. Show a validation message to the student.
+
+8. The system notifies the administrators.
+
+### Responsibilities
+
+**Student Access Responsibilities**
+
+1. Authenticate the student.
+2. Load the page from the database.
+
+**Complaint Sending Responsibilities**
+
+1. Get the student message and student ID.
+2. Send the message with the student ID and other information to the administrator box.
+3. Check if the message was successfully sent and received.
+4. Send a validation message to the user.
+
+**Administrator Notifications System**
+
+1. Check for new messages.
+2. Count the number of unseen messages.
 
 
 
