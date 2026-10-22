@@ -98,6 +98,62 @@ As a student, they can check machine availability from their room to avoid waiti
 
 ___
 
+## - Features : Registering a student for Administrator
+
+As an administrator, I want to register a student in the system and verify their application, so that the student can be officially registered and receive their contract.
+
+### Feature breakdown
+
+1. Administrator has to authenticate on the application
+2. Administrator enters the student registration page
+3. Administrator collects and fills in credentials about the student
+4. System checks whether the student ID already exists in the student database
+5. If the student ID already exists:
+
+   a. System fails the operation and informs the administrator
+
+   b. System redirects the administrator back to the main page
+
+6. If the student ID does not exist, system displays the student registration form
+7. System checks the documents sent by the student during the application process
+8. If documents are missing:
+
+   a. System sends an email request for the missing documents
+
+   b. System saves the current state of the application in the platform
+
+9. If all required documents have been sent:
+
+   a. System validates the application
+
+   b. System sends the contract to the student for signature
+
+### Responsibilities
+
+#### Administrator access responsibilities
+
+- Authenticate and authorize the administrator
+- Display the student registration interface
+
+#### Student identification responsibilities
+
+- Collect and validate the student's registration information
+- Check whether the student ID already exists
+- Reject duplicate registrations and inform the administrator
+
+#### Document verification responsibilities
+
+- Retrieve and check the student's application documents
+- Identify missing required documents
+- Send an email requesting missing documents
+
+#### Application processing responsibilities
+
+- Save the current state of the application
+- Validate the complete application and send the contract for signature
+
+___
+
 
 
 
