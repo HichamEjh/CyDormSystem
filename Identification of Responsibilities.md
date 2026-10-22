@@ -1,5 +1,4 @@
-# **Dormitory System**
-## Core features and responsibilities
+# **Dormitory System** : Core features and responsibilities
 
 ##  - Features : Automated invoicing and payment alerts for Admin 
 
