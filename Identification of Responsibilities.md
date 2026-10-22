@@ -74,23 +74,23 @@ As a student, they can check machine availability from their room to avoid waiti
 
 ### Responsibilities
 
-#### Assign an available machine to the user
+#### Assign an available machine to the user responsibilities
 
 - Find an available machine
 - Unlock its doors
 
-#### User Management 
+#### User Management responsibilities
 
 - Manage credit card transactions and the virtual balance
 - Allow a user to book a machine for a specific time
 - Display the history of completed cycles and payment receipts
 
-#### Maintenance System
+#### Maintenance System responsibilities
 
 - Allow the user to report a broken machine
 - Send alerts to the manager
 
-#### Tracking System
+#### Tracking System responsibilities
 
 - Show which machines are free, in use, or out of order
 - Display the remaining time for the current machine
