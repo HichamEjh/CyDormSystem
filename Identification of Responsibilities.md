@@ -1,7 +1,7 @@
 # **Dormitory System**
 ## Core features and responsibilities
 
-## <u> - Features : Automated invoicing and payment alerts for Admin </u>
+##  - Features : Automated invoicing and payment alerts for Admin 
 
 ### **Feature breakdown**
 1. Admin has to authenticate on the application
@@ -20,24 +20,24 @@
 
 ### **Responsibilities**
 
-#### <u>Configuring invoice generation responsibilities </u>
+#### Configuring invoice generation responsibilities 
 - Validate input parameters
 - Persist configuration settings in the database
 
-#### <u>Schedule invoice generation responsibilities</u>
+#### Schedule invoice generation responsibilities
 - Register/Update background schedule job
 - Monitor the availability and health of the scheduling worker
 
-#### <u>Generating payment information responsibilities</u>
+#### Generating payment information responsibilities
 - Calculate total invoice amount per resident
 - Determine payment due date based on the configured due window
 - Store invoice records with status Unpaid
 - Generate payment link
 
-#### <u>Generate a downloadable PDF invoice</u>
+#### Generate a downloadable PDF invoice
 - Render standardized PDF document from invoice data
 
-#### <u>Send emails with invoice and payment reminder</u>
+#### Send emails with invoice and payment reminder
 - Compose personalized invoice notification message
 - Dispatch email with PDF attachment via mail provider
 - Handle email delivery retries on failure
