@@ -168,8 +168,8 @@ As a student, they can submit a complaint through the application and receive co
    2.2. The student enters their credentials.
 
    2.3. If the credentials are incorrect:
-   - Show an incorrect password or ID message.
-   - Ask the student to try again.
+   1. Show an incorrect password or ID message.
+   2. Ask the student to try again.
 
 3. The student can file the complaint message.
 
@@ -190,21 +190,20 @@ As a student, they can submit a complaint through the application and receive co
 ### Responsibilities
 
 **Student Access Responsibilities**
-
-1. Authenticate the student.
-2. Load the page from the database.
+- Authenticate the student.
+- Load the page from the database.
 
 **Complaint Sending Responsibilities**
 
-1. Get the student message and student ID.
-2. Send the message with the student ID and other information to the administrator box.
-3. Check if the message was successfully sent and received.
-4. Send a validation message to the user.
+- Get the student message and student ID.
+- Send the message with the student ID and other information to the administrator box.
+- Check if the message was successfully sent and received.
+- Send a validation message to the user.
 
 **Administrator Notifications System**
 
-1. Check for new messages.
-2. Count the number of unseen messages.
+- Check for new messages.
+- Count the number of unseen messages.
 
 ___
 
