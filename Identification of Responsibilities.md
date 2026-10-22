@@ -2,6 +2,8 @@
 
 ##  - Features : Automated invoicing and payment alerts for Admin 
 
+As an admin, I want the system to automatically generate monthly invoices for residents and send payment reminders, so that rent is billed on schedule and collected on time, without requiring manual effort each month.
+
 ### **Feature breakdown**
 1. Admin has to authenticate on the application
 2. Admin sets the invoice generation date in the system
