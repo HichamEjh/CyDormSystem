@@ -34,7 +34,7 @@
 - Store invoice records with status Unpaid
 - Generate payment link
 
-#### <u>Generate a downloadable PDF invoice</u>**
+#### <u>Generate a downloadable PDF invoice</u>
 - Render standardized PDF document from invoice data
 
 #### <u>Send emails with invoice and payment reminder</u>
