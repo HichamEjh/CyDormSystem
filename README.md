@@ -1,6 +1,6 @@
 # CyDormSystem (`CDS`)
 
-Software architecture project for **NSWI130 — Software System Architectures** (Charles University, MFF).
+Software architecture project for **NSWI130 — Software System Architectures**.
 CyDormSystem is a web application for managing student dormitories: facility bookings (laundry, study rooms), rent invoicing and payments, resident registration, complaints, and maintenance/housekeeping workflows.
 
 ## Repository Structure
