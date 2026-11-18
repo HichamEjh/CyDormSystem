@@ -207,7 +207,82 @@ As a student, they can submit a complaint through the application and receive co
 
 ___
 
+## - Features : Study-room and gym booking for Student
 
+As a student, I want to search and reserve an available study room or gym slot, so that I have a guaranteed space at my chosen time without scheduling conflicts.
 
+### Feature breakdown
 
+1. Student has to authenticate on the application
+2. Student selects the facility type (study room or gym), desired date, time slot, and optional location/capacity filter
+3. System checks existing bookings and facility schedules to find available rooms/slots without overlaps
+4. If no slot is available:
+    a. System informs the student that no space is free for the chosen time
+    b. System suggests the nearest available time slots
+5. If slots are available:
+    a. System displays the list of free rooms/slots to the student
+    b. Student picks the desired room/slot and confirms the booking
+    c. System re-checks for concurrent overlaps and saves the booking record
+    d. System shows a booking confirmation and sends an email confirmation
 
+### Responsibilities
+
+#### Student access responsibilities
+- Authenticate and authorize the student
+- Display the facility search and booking interface
+
+#### Availability and search responsibilities
+- Load study rooms and gym slots matching the requested filters
+- Check existing bookings to detect and exclude overlapping time slots
+- Suggest alternative available slots when the requested time is full
+
+#### Booking management responsibilities
+- Re-validate slot availability atomically to prevent double bookings
+- Create and persist the confirmed booking record in the database
+- Allow the student to view or cancel upcoming bookings
+
+#### Confirmation and notification responsibilities
+- Display immediate booking confirmation details to the student
+- Request the communication module to send a booking confirmation email
+- Log the booking action in the audit trail
+
+___
+
+## - Features : Room cleaning and maintenance requests
+
+As a student, I want to submit cleaning or maintenance requests for my room, and as a housekeeper or technician, I want to view assigned tasks and update their status, so that dormitory rooms remain clean and functional.
+
+### Feature breakdown
+
+1. Student has to authenticate on the application and opens the room request page
+2. Student selects the request type (Cleaning or Maintenance), describes the issue, and submits the request
+3. System validates the input and saves the request in the database with status Pending
+4. System routes and notifies the appropriate staff role:
+    a. Housekeeper for cleaning requests
+    b. Technician for maintenance requests
+5. Staff member (Housekeeper or Technician) authenticates and views the list of pending tasks assigned to their role
+6. Staff member updates the task status (In Progress, then Completed or Blocked)
+7. System updates the request status in the database and notifies the student when the task is completed
+
+### Responsibilities
+
+#### Request submission responsibilities
+- Authenticate the student and load the room request form
+- Validate request fields (type, room ID, description)
+- Persist the new request with initial status Pending
+
+#### Routing and assignment responsibilities
+- Route cleaning requests to the Housekeeper queue and maintenance requests to the Technician queue
+- Trigger role-based task notifications when a new request is created
+
+#### Task execution and status tracking responsibilities
+- Authenticate and authorize Housekeeper and Technician roles
+- Display pending and active tasks filtered by role and status
+- Validate and persist task status transitions (Pending -> In Progress -> Completed)
+- Update room readiness status when a cleaning task is completed
+
+#### Notification and logging responsibilities
+- Notify the student when their request status changes to Completed
+- Record request creation and status updates in the audit trail
+
+___
