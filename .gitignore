@@ -1,0 +1,14 @@
+# IDE & OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local course materials & internal audit/tooling files
+cours/
+SKILL.md
+CyDormSystem_Analyse_Projet.pdf
+
+# Temporary files & logs
+*.tmp
+*.log
