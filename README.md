@@ -15,6 +15,8 @@ CyDormSystem/
 │   ├── architecture-draft.md
 │   └── architecture-decomposition.pdf
 ├── 03-c4-model/
+│   └── dynamic-diagram
+│       └── student-registration-dynamic-diagram.png
 │   ├── c4-l1-system.drawio.png
 │   ├── c4-l2-container.drawio.png
 │   ├── c4-l3-api-application.drawio.png
