@@ -56,3 +56,16 @@ flowchart TD
 ```
 
 The UI displays role-specific views (`Student`, `Admin`, `Housekeeper`, `Technician`). The `API Application` enforces RBAC and synchronous business rules, while the `Background Worker` handles scheduled monthly invoicing, PDF generation and payment reminders. The database stores students, facilities, bookings, tasks, balances, invoices and complaints.
+
+## 5. Responsibilities in the C4 model
+
+### Study-room and gym booking
+
+| Responsibility | Container and components |
+|---|---|
+| Student access | The **UI** uses the Authentication & Role Router and displays the Facility Booking View. The **API Application** checks the session and student role in Auth & RBAC Middleware. |
+| Availability and search | The **API Application** uses the Booking & Facility Service to apply filters, check for overlaps, and suggest alternatives. The Facility & Task Repository reads schedules and bookings from the **Database**. |
+| Booking management | The **API Application** uses the Booking & Facility Service to create, list, and cancel the student's own bookings. The Facility & Task Repository checks availability and inserts the reservation atomically in the **Database**. |
+| Confirmation and notification | The **UI** shows the result in the Facility Booking View. The **API Application** uses the Audit Logger to record the successful booking, the Notification Composer to prepare the confirmation, and the Email Notification Service to send it through the Mail Provider. |
+
+[Booking dynamic diagram](../03-c4-model/dynamic-diagram/study-room-gym-booking-dynamic-diagram.drawio.png)

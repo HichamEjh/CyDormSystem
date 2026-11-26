@@ -153,7 +153,7 @@ As an administrator, I want to register a student in the system and verify their
 - Validate the complete application and send the contract for signature
 
 ___
-## - Features: Student Complaint Submission
+## - Features : Student Complaint Submission
 
 As a student, they can submit a complaint through the application and receive confirmation that it has been sent to the administrators.
 
@@ -209,6 +209,8 @@ ___
 
 ## - Features : Study-room and gym booking for Student
 
+**David Erwin**
+
 As a student, I want to search and reserve an available study room or gym slot, so that I have a guaranteed space at my chosen time without scheduling conflicts.
 
 ### Feature breakdown
@@ -216,14 +218,11 @@ As a student, I want to search and reserve an available study room or gym slot, 
 1. Student has to authenticate on the application
 2. Student selects the facility type (study room or gym), desired date, time slot, and optional location/capacity filter
 3. System checks existing bookings and facility schedules to find available rooms/slots without overlaps
-4. If no slot is available:
-    a. System informs the student that no space is free for the chosen time
-    b. System suggests the nearest available time slots
-5. If slots are available:
-    a. System displays the list of free rooms/slots to the student
-    b. Student picks the desired room/slot and confirms the booking
-    c. System re-checks for concurrent overlaps and saves the booking record
-    d. System shows a booking confirmation and sends an email confirmation
+4. If no slot is available, the system says so and suggests the nearest available times.
+5. If slots are available, the system lists them and the student picks one to book.
+6. The system checks availability again and saves the booking in one transaction. If another student booked the slot first, the system asks the student to choose another slot.
+7. The system shows the booking confirmation and sends a confirmation email.
+8. Student can view or cancel their upcoming bookings.
 
 ### Responsibilities
 
@@ -245,6 +244,8 @@ As a student, I want to search and reserve an available study room or gym slot, 
 - Display immediate booking confirmation details to the student
 - Request the communication module to send a booking confirmation email
 - Log the booking action in the audit trail
+
+See the [C4 dynamic diagram](../03-c4-model/dynamic-diagram/study-room-gym-booking-dynamic-diagram.drawio.png) and [responsibility mapping](../02-decomposition/architecture-draft.md#study-room-and-gym-booking).
 
 ___
 
